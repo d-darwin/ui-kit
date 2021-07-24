@@ -1,12 +1,23 @@
 import { shallowMount } from "@vue/test-utils";
-import HelloWorld from "@/components/HelloWorld.vue";
+import FirstTsx from "@/components/firstTsx";
 
-describe("HelloWorld.vue", () => {
+describe("FirstTsx", () => {
+  const msg = "some msg";
+  const content = { code: 120, message: "some message" };
+
+  const wrapper = shallowMount(FirstTsx, {
+    props: { msg, content },
+  });
+
   it("renders props.msg when passed", () => {
-    const msg = "new message";
-    const wrapper = shallowMount(HelloWorld, {
-      props: { msg },
-    });
     expect(wrapper.text()).toMatch(msg);
+  });
+
+  it("renders props.content.code when passed", () => {
+    expect(wrapper.text()).toMatch(String(content.code));
+  });
+
+  it("renders props.content.message when passed", () => {
+    expect(wrapper.text()).toMatch(content.message);
   });
 });
