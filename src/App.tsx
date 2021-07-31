@@ -1,5 +1,6 @@
 import { defineComponent, VNode } from "vue";
 import FirstTsx from "@/components/firstTsx";
+import { DTypography } from "@/index";
 
 export default defineComponent({
   data() {
@@ -8,7 +9,10 @@ export default defineComponent({
     };
   },
 
-  render(): VNode {
-    return <FirstTsx msg="ssss" content={this.content} />;
+  render(): VNode[] {
+    return [
+      <FirstTsx msg="ssss" content={this.content} />,
+      <DTypography tag="span" content="d-typography" />,
+    ];
   },
 });
