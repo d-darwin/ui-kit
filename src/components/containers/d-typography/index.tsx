@@ -2,8 +2,8 @@ import { defineComponent, PropType, VNode } from "vue";
 
 // TODO: add library path alias
 import generateTypographySizeProp from "@/prop-factories/typography-size";
-import { TagName } from "@/types";
-import { TAG_NAMES } from "@/constants";
+import { TagName } from "@/components/containers/d-typography/types";
+import { TAG_NAMES } from "@/components/containers/d-typography/constants";
 
 import typographyStyles from "@/assets/styles/compositions/_typography.scss?module";
 import styles from "./styles.css?module";
@@ -31,17 +31,19 @@ export default defineComponent({
     },
   },
 
+  // TODO: or use setup() ???
   render(): VNode {
     const Tag: TagName = this.tag;
+    const classList = {
+      [styles.DTypography]: true,
+      [typographyStyles[this.size]]: true,
+    };
 
-    return (
-      <Tag
-        class={{
-          [styles.DTypography]: true,
-          [typographyStyles[this.size]]: true,
-        }}
-      >
-        {this.content}
+    return !this.$slots.default ? (
+      <Tag class={classList} vHtml={this.content} />
+    ) : (
+      <Tag class={classList}>
+        <slot />
       </Tag>
     );
   },

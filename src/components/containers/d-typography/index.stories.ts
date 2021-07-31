@@ -1,27 +1,30 @@
 import { DTypography } from "@/index";
-import { TagName, TypographySize } from "@/types";
+import {
+  Content,
+  TypographySize as Size,
+  TagName as Tag,
+} from "@/components/containers/d-typography/types";
+import {
+  content,
+  typographySize as size,
+  tagName as tag,
+} from "@/storybook-arg-types";
 
 export default {
   title: "containers/DTypography",
   component: DTypography,
   argTypes: {
-    // TODO add common argTypes
-    content: { control: { type: "text" } },
-    size: { control: { type: "select" }, options: ["general", "small"] },
-    tag: { control: { type: "select" }, options: ["span", "div"] },
+    content,
+    size,
+    tag,
   },
   args: {
-    content: "Simple string content",
-    size: "small",
-    tag: "span",
+    size: "general",
+    tag: "div",
   },
 };
 
-const Template = (args: {
-  content: string | number | undefined;
-  size: TypographySize;
-  tag: TagName;
-}) => ({
+const Template = (args: { content: Content; size: Size; tag: Tag }) => ({
   components: { DTypography },
   setup() {
     return { args };
@@ -29,4 +32,18 @@ const Template = (args: {
   template: "<DTypography v-bind='args' />",
 });
 
-export const Default = Template.bind({});
+export const PlainContent = Template.bind({});
+// @ts-ignore // TODO: fix typing
+PlainContent.args = {
+  content: "Plain Content",
+};
+
+export const HTMLContent = Template.bind({});
+// @ts-ignore // TODO: fix typing
+HTMLContent.args = {
+  content: "<i>HTML Content</i>",
+};
+
+// TODO: with slot
+
+// TODO: ???
