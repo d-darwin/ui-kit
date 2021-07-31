@@ -12,7 +12,7 @@ export default defineComponent({
   render(): VNode[] {
     return [
       <FirstTsx msg="ssss" content={this.content} />,
-      <DTypography tag="span" content="d-typography" />,
+      <DTypography content="d-typography content" size="h1" tag="span" />,
     ];
   },
 });

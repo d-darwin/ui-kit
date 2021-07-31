@@ -1,0 +1,111 @@
+@import "../tokens/links";
+
+@mixin link-primary {
+  & {
+    color: var(--link-primary-color);
+    text-decoration: var(--link-primary-text-decoration);
+  }
+
+  &:visited {
+    color: var(--link-primary-visited-color);
+    text-decoration: var(--link-primary-visited-text-decoration);
+  }
+
+  &:hover {
+    color: var(--link-primary-hover-color);
+    text-decoration: var(--link-primary-hover-text-decoration);
+  }
+
+  &:active {
+    color: var(--link-primary-active-color);
+    text-decoration: var(--link-primary-active-text-decoration);
+  }
+}
+
+@mixin link-secondary {
+  & {
+    color: var(--link-secondary-color);
+    text-decoration: var(--link-secondary-text-decoration);
+  }
+
+  &:visited {
+    color: var(--link-secondary-visited-color);
+    text-decoration: var(--link-secondary-visited-text-decoration);
+  }
+
+  &:hover {
+    color: var(--link-secondary-hover-color);
+    text-decoration: var(--link-secondary-hover-text-decoration);
+  }
+
+  &:active {
+    color: var(--link-secondary-active-color);
+    text-decoration: var(--link-secondary-active-text-decoration);
+  }
+}
+
+@mixin link-alternative {
+  & {
+    color: var(--link-alternative-color);
+    text-decoration: var(--link-alternative-text-decoration);
+  }
+
+  &:visited {
+    color: var(--link-alternative-visited-color);
+    text-decoration: var(--link-alternative-visited-text-decoration);
+  }
+
+  &:hover {
+    color: var(--link-alternative-hover-color);
+    text-decoration: var(--link-alternative-hover-text-decoration);
+  }
+
+  &:active {
+    color: var(--link-alternative-active-color);
+    text-decoration: var(--link-alternative-active-text-decoration);
+  }
+}
+
+@mixin link-inverse {
+  & {
+    color: var(--link-inverse-color);
+    text-decoration: var(--link-inverse-text-decoration);
+  }
+
+  &:visited {
+    color: var(--link-inverse-visited-color);
+    text-decoration: var(--link-inverse-visited-text-decoration);
+  }
+
+  &:hover {
+    color: var(--link-inverse-hover-color);
+    text-decoration: var(--link-inverse-hover-text-decoration);
+  }
+
+  &:active {
+    color: var(--link-inverse-active-color);
+    text-decoration: var(--link-inverse-active-text-decoration);
+  }
+}
+
+@mixin link-danger {
+  & {
+    color: var(--link-danger-color);
+    text-decoration: var(--link-danger-text-decoration);
+  }
+
+  &:visited {
+    color: var(--link-danger-visited-color);
+    text-decoration: var(--link-danger-visited-text-decoration);
+  }
+
+  &:hover {
+    color: var(--link-danger-hover-color);
+    text-decoration: var(--link-danger-hover-text-decoration);
+  }
+
+  &:active {
+    color: var(--link-danger-active-color);
+    text-decoration: var(--link-danger-active-text-decoration);
+  }
+}

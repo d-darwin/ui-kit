@@ -1,0 +1,55 @@
+@import "../tokens/_typography.scss";
+
+.small {
+  font-size: var(--small-font-size);
+  line-height: var(--small-line-height);
+  font-weight: var(--small-font-weight);
+}
+
+.general {
+  font-size: var(--general-font-size);
+  line-height: var(--general-line-height);
+  font-weight: var(--general-font-weight);
+}
+
+.longread {
+  font-size: var(--longread-font-size);
+  line-height: var(--longread-line-height);
+  font-weight: var(--longread-font-weight);
+}
+
+.augmented {
+  font-size: var(--augmented-font-size);
+  line-height: var(--augmented-line-height);
+  font-weight: var(--augmented-font-weight);
+}
+
+.h5 {
+  font-size: var(--h5-font-size);
+  line-height: var(--h5-line-height);
+  font-weight: var(--h5-font-weight);
+}
+
+.h4 {
+  font-size: var(--h4-font-size);
+  line-height: var(--h4-line-height);
+  font-weight: var(--h4-font-weight);
+}
+
+.h3 {
+  font-size: var(--h3-font-size);
+  line-height: var(--h3-line-height);
+  font-weight: var(--h3-font-weight);
+}
+
+.h2 {
+  font-size: var(--h2-font-size);
+  line-height: var(--h2-line-height);
+  font-weight: var(--h2-font-weight);
+}
+
+.h1 {
+  font-size: var(--h1-font-size);
+  line-height: var(--h1-line-height);
+  font-weight: var(--h1-font-weight);
+}

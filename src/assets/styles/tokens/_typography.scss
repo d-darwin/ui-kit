@@ -1,0 +1,125 @@
+$small-font-size: 13px !default;
+$small-line-height: 20px !default;
+$small-font-weight: normal !default;
+
+$general-font-size: 15px !default;
+$general-line-height: 22px !default;
+$general-font-weight: normal !default;
+
+$longread-font-size: 16px !default;
+$longread-line-height: 24px !default;
+$longread-font-weight: normal !default;
+
+$augmented-font-size: 18px !default;
+$augmented-line-height: 26px !default;
+$augmented-font-weight: normal !default;
+
+$h5-font-size: 15px !default;
+$h5-line-height: 22px !default;
+$h5-font-weight: bold !default;
+
+$h4-font-size: 19px !default;
+$h4-line-height: 26px !default;
+$h4-font-weight: bold !default;
+
+$h3-font-size: 25px !default;
+$h3-line-height: 34px !default;
+$h3-font-weight: bold !default;
+
+$h2-font-size: 36px !default;
+$h2-line-height: 46px !default;
+$h2-font-weight: bold !default;
+
+$h1-font-size: 48px !default;
+$h1-line-height: 60px !default;
+$h1-font-weight: bold !default;
+
+/**
+ * Map to CSS custom properties
+ */
+
+:root {
+  --small-font-size: #{$small-font-size};
+  --small-line-height: #{$small-line-height};
+  --small-font-weight: #{$small-font-weight};
+
+  --general-font-size: #{$general-font-size};
+  --general-line-height: #{$general-line-height};
+  --general-font-weight: #{$general-font-weight};
+
+  --longread-font-size: #{$longread-font-size};
+  --longread-line-height: #{$longread-line-height};
+  --longread-font-weight: #{$longread-font-weight};
+
+  --augmented-font-size: #{$augmented-font-size};
+  --augmented-line-height: #{$augmented-line-height};
+  --augmented-font-weight: #{$augmented-font-weight};
+
+  --h5-font-size: #{$h5-font-size};
+  --h5-line-height: #{$h5-line-height};
+  --h5-font-weight: #{$h5-font-weight};
+
+  --h4-font-size: #{$h4-font-size};
+  --h4-line-height: #{$h4-line-height};
+  --h4-font-weight: #{$h4-font-weight};
+
+  --h3-font-size: #{$h3-font-size};
+  --h3-line-height: #{$h3-line-height};
+  --h3-font-weight: #{$h3-font-weight};
+
+  --h2-font-size: #{$h2-font-size};
+  --h2-line-height: #{$h2-line-height};
+  --h2-font-weight: #{$h2-font-weight};
+
+  --h1-font-size: #{$h1-font-size};
+  --h1-line-height: #{$h1-line-height};
+  --h1-font-weight: #{$h1-font-weight};
+}
+
+html {
+  font-family: var(--font-family, "Geneva, Arial, Helvetica, sans-serif");
+  font-size: var(--general-font-size);
+  line-height: var(--general-line-height);
+  font-weight: var(--general-font-weight);
+}
+
+// the :export directive is the magic sauce for webpack.
+// this variables will be available to js on build time.
+// noinspection CssUnknownProperty
+:export {
+  small-font-size: $small-font-size;
+  small-line-height: $small-line-height;
+  small-font-weight: $small-font-weight;
+
+  general-font-size: $general-font-size;
+  general-line-height: $general-line-height;
+  general-font-weight: $general-font-weight;
+
+  longread-font-size: $longread-font-size;
+  longread-line-height: $longread-line-height;
+  longread-font-weight: $longread-font-weight;
+
+  augmented-font-size: $augmented-font-size;
+  augmented-line-height: $augmented-line-height;
+  augmented-font-weight: $augmented-font-weight;
+
+  h5-font-size: $h5-font-size;
+  h5-line-height: $h5-line-height;
+  h5-font-weight: $h5-font-weight;
+
+  h4-font-size: $h4-font-size;
+  h4-line-height: $h4-line-height;
+  h4-font-weight: $h4-font-weight;
+
+  h3-font-size: $h3-font-size;
+  h3-line-height: $h3-line-height;
+  h3-font-weight: $h3-font-weight;
+
+  h2-font-size: $h2-font-size;
+  h2-line-height: $h2-line-height;
+  h2-font-weight: $h2-font-weight;
+
+  h1-font-size: $h1-font-size;
+  h1-line-height: $h1-line-height;
+  h1-font-weight: $h1-font-weight;
+}

@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "plugins": [{ "name": "typescript-plugin-css-modules" }],
     "target": "esnext",
     "module": "esnext",
     "strict": true,
@@ -34,6 +33,7 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/**/*.css",
+    "src/**/*.scss",
     "tests/**/*.ts",
     "tests/**/*.tsx"
   ],

@@ -1,0 +1,147 @@
+@import "./colors";
+
+$link-primary-color: var(--color-link) !default;
+$link-primary-text-decoration: none !default;
+$link-primary-visited-color: var(--color-link) !default;
+$link-primary-visited-text-decoration: none !default;
+$link-primary-hover-color: var(--color-link) !default;
+$link-primary-hover-text-decoration: underline !default;
+$link-primary-active-color: var(--color-link) !default;
+$link-primary-active-text-decoration: underline !default;
+
+$link-secondary-color: var(--color-text) !default;
+$link-secondary-text-decoration: none !default;
+$link-secondary-visited-color: var(--color-text) !default;
+$link-secondary-visited-text-decoration: none !default;
+$link-secondary-hover-color: var(--color-primary-active) !default;
+$link-secondary-hover-text-decoration: none !default;
+$link-secondary-active-color: var(--color-primary-active) !default;
+$link-secondary-active-text-decoration: none !default;
+
+$link-alternative-color: var(--color-text-aux) !default;
+$link-alternative-text-decoration: none !default;
+$link-alternative-visited-color: var(--color-text-aux) !default;
+$link-alternative-visited-text-decoration: none !default;
+$link-alternative-hover-color: var(--color-text-aux) !default;
+$link-alternative-hover-text-decoration: underline !default;
+$link-alternative-active-color: var(--color-text-aux) !default;
+$link-alternative-active-text-decoration: underline !default;
+
+$link-inverse-color: var(--white) !default;
+$link-inverse-text-decoration: none !default;
+$link-inverse-visited-color: var(--white) !default;
+$link-inverse-visited-text-decoration: none !default;
+$link-inverse-hover-color: var(--color-primary-disabled) !default;
+$link-inverse-hover-text-decoration: none !default;
+$link-inverse-active-color: var(--color-primary-disabled) !default;
+$link-inverse-active-text-decoration: none !default;
+
+$link-danger-color: var(--color-danger) !default;
+$link-danger-text-decoration: none !default;
+$link-danger-visited-color: var(--color-danger) !default;
+$link-danger-visited-text-decoration: none !default;
+$link-danger-hover-color: var(--color-danger) !default;
+$link-danger-hover-text-decoration: underline !default;
+$link-danger-active-color: var(--color-danger) !default;
+$link-danger-active-text-decoration: underline !default;
+
+/**
+ * Map to CSS custom properties
+ */
+
+:root {
+  --link-primary-color: #{$link-primary-color};
+  --link-primary-text-decoration: #{$link-primary-text-decoration};
+  --link-primary-hover-color: #{$link-primary-hover-color};
+  --link-primary-hover-text-decoration: #{$link-primary-hover-text-decoration};
+  --link-primary-active-color: #{$link-primary-active-color};
+  --link-primary-active-text-decoration: #{$link-primary-active-text-decoration};
+  --link-primary-visited-color: #{$link-primary-visited-color};
+  --link-primary-visited-text-decoration: #{$link-primary-visited-text-decoration};
+
+  --link-secondary-color: #{$link-secondary-color};
+  --link-secondary-text-decoration: #{$link-secondary-text-decoration};
+  --link-secondary-hover-color: #{$link-secondary-hover-color};
+  --link-secondary-hover-text-decoration: #{$link-secondary-hover-text-decoration};
+  --link-secondary-active-color: #{$link-secondary-active-color};
+  --link-secondary-active-text-decoration: #{$link-secondary-active-text-decoration};
+  --link-secondary-visited-color: #{$link-secondary-visited-color};
+  --link-secondary-visited-text-decoration: #{$link-secondary-visited-text-decoration};
+
+  --link-alternative-color: #{$link-alternative-color};
+  --link-alternative-text-decoration: #{$link-alternative-text-decoration};
+  --link-alternative-hover-color: #{$link-alternative-hover-color};
+  --link-alternative-hover-text-decoration: #{$link-alternative-hover-text-decoration};
+  --link-alternative-active-color: #{$link-alternative-active-color};
+  --link-alternative-active-text-decoration: #{$link-alternative-active-text-decoration};
+  --link-alternative-visited-color: #{$link-alternative-visited-color};
+  --link-alternative-visited-text-decoration: #{$link-alternative-visited-text-decoration};
+
+  --link-inverse-color: #{$link-inverse-color};
+  --link-inverse-text-decoration: #{$link-inverse-text-decoration};
+  --link-inverse-hover-color: #{$link-inverse-hover-color};
+  --link-inverse-hover-text-decoration: #{$link-inverse-hover-text-decoration};
+  --link-inverse-active-color: #{$link-inverse-active-color};
+  --link-inverse-active-text-decoration: #{$link-inverse-active-text-decoration};
+  --link-inverse-visited-color: #{$link-inverse-visited-color};
+  --link-inverse-visited-text-decoration: #{$link-inverse-visited-text-decoration};
+
+  --link-danger-color: #{$link-danger-color};
+  --link-danger-text-decoration: #{$link-danger-text-decoration};
+  --link-danger-hover-color: #{$link-danger-hover-color};
+  --link-danger-hover-text-decoration: #{$link-danger-hover-text-decoration};
+  --link-danger-active-color: #{$link-danger-active-color};
+  --link-danger-active-text-decoration: #{$link-danger-active-text-decoration};
+  --link-danger-visited-color: #{$link-danger-visited-color};
+  --link-danger-visited-text-decoration: #{$link-danger-visited-text-decoration};
+}
+
+// the :export directive is the magic sauce for webpack.
+// this variables will be available to js on build time.
+// noinspection CssUnknownProperty
+:export {
+  link-primary-color: $link-primary-color;
+  link-primary-text-decoration: $link-primary-text-decoration;
+  link-primary-hover-color: $link-primary-hover-color;
+  link-primary-hover-text-decoration: $link-primary-hover-text-decoration;
+  link-primary-active-color: $link-primary-active-color;
+  link-primary-active-text-decoration: $link-primary-active-text-decoration;
+  link-primary-visited-color: $link-primary-visited-color;
+  link-primary-visited-text-decoration: $link-primary-visited-text-decoration;
+
+  link-secondary-color: $link-secondary-color;
+  link-secondary-text-decoration: $link-secondary-text-decoration;
+  link-secondary-hover-color: $link-secondary-hover-color;
+  link-secondary-hover-text-decoration: $link-secondary-hover-text-decoration;
+  link-secondary-active-color: $link-secondary-active-color;
+  link-secondary-active-text-decoration: $link-secondary-active-text-decoration;
+  link-secondary-visited-color: $link-secondary-visited-color;
+  link-secondary-visited-text-decoration: $link-secondary-visited-text-decoration;
+
+  link-alternative-color: $link-alternative-color;
+  link-alternative-text-decoration: $link-alternative-text-decoration;
+  link-alternative-hover-color: $link-alternative-hover-color;
+  link-alternative-hover-text-decoration: $link-alternative-hover-text-decoration;
+  link-alternative-active-color: $link-alternative-active-color;
+  link-alternative-active-text-decoration: $link-alternative-active-text-decoration;
+  link-alternative-visited-color: $link-alternative-visited-color;
+  link-alternative-visited-text-decoration: $link-alternative-visited-text-decoration;
+
+  link-inverse-color: $link-inverse-color;
+  link-inverse-text-decoration: $link-inverse-text-decoration;
+  link-inverse-hover-color: $link-inverse-hover-color;
+  link-inverse-hover-text-decoration: $link-inverse-hover-text-decoration;
+  link-inverse-active-color: $link-inverse-active-color;
+  link-inverse-active-text-decoration: $link-inverse-active-text-decoration;
+  link-inverse-visited-color: $link-inverse-visited-color;
+  link-inverse-visited-text-decoration: $link-inverse-visited-text-decoration;
+
+  link-danger-color: $link-danger-color;
+  link-danger-text-decoration: $link-danger-text-decoration;
+  link-danger-hover-color: $link-danger-hover-color;
+  link-danger-hover-text-decoration: $link-danger-hover-text-decoration;
+  link-danger-active-color: $link-danger-active-color;
+  link-danger-active-text-decoration: $link-danger-active-text-decoration;
+  link-danger-visited-color: $link-danger-visited-color;
+  link-danger-visited-text-decoration: $link-danger-visited-text-decoration;
+}
