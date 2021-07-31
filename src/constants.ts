@@ -2,7 +2,7 @@
 export const TAG_NAMES = {
   div: "div",
   span: "span",
-};
+} as const;
 
 export const TYPOGRAPHY_SIZES = {
   small: "small",
@@ -14,4 +14,4 @@ export const TYPOGRAPHY_SIZES = {
   h3: "h3",
   h2: "h2",
   h1: "h1",
-};
+} as const;

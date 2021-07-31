@@ -1,4 +1,4 @@
-import FirstTsx from "../components/firstTsx";
+import FirstTsx from "./firstTsx";
 import { template } from "@babel/core";
 
 export default {

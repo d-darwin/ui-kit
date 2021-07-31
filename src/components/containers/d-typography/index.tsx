@@ -5,13 +5,14 @@ import generateTypographySizeProp from "@/prop-factories/typography-size";
 import { TagName } from "@/types";
 import { TAG_NAMES } from "@/constants";
 
-import typographyStyles from "@/assets/styles/compositions/_typography.module.scss";
-import styles from "./styles.module.css";
+import typographyStyles from "@/assets/styles/compositions/_typography.scss?module";
+import styles from "./styles.css?module";
 
 export default defineComponent({
   name: "DTypography",
 
   props: {
+    // TODO: move to common props
     content: {
       type: [String, Number] as PropType<string | number>,
     },
@@ -23,6 +24,7 @@ export default defineComponent({
      * Which tag should wrap the component content. Pass null if you dont need any wrapper.
      * @type {TagName}
      */
+    // TODO: move to common props
     tag: {
       type: String as PropType<TagName>,
       default: TAG_NAMES.div,

@@ -1,4 +1,4 @@
-declare module "*.module.css" {
+declare module "*.css?module" {
   interface IClassNames {
     [className: string]: string;
   }
@@ -6,7 +6,7 @@ declare module "*.module.css" {
   export = classNames;
 }
 
-declare module "*.scss" {
+declare module "*.scss?module" {
   interface IClassNames {
     [className: string]: string;
   }
