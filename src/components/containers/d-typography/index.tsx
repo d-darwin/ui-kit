@@ -41,7 +41,7 @@ export default defineComponent({
           [typographyStyles[this.size]]: true,
         }}
       >
-        {this.content}*{this.size}*
+        *{styles}* *{typographyStyles}*{this.content}
       </Tag>
     );
   },

@@ -7,8 +7,8 @@ export default {
   argTypes: {
     // TODO add common argTypes
     content: { control: { type: "text" } },
-    size: { control: { type: "select", options: ["general", "small"] } },
-    tag: { control: { type: "select", options: ["span", "div"] } },
+    size: { control: { type: "select" }, options: ["general", "small"] },
+    tag: { control: { type: "select" }, options: ["span", "div"] },
   },
   args: {
     content: "Simple string content",
@@ -26,7 +26,7 @@ const Template = (args: {
   setup() {
     return { args };
   },
-  template: "<DTypography {...args} />",
+  template: "<DTypography v-bind='args' />",
 });
 
 export const Default = Template.bind({});
