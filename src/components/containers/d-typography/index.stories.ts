@@ -1,9 +1,10 @@
+import { Story } from "@storybook/vue3";
 import { DTypography } from "@/index";
+import { DTypographyProps } from "@/components/containers/d-typography/types";
 import {
-  Content,
-  TypographySize as Size,
-  TagName as Tag,
-} from "@/components/containers/d-typography/types";
+  TAG_NAMES,
+  TYPOGRAPHY_SIZES,
+} from "@/components/containers/d-typography/constants";
 import {
   content,
   typographySize as size,
@@ -13,18 +14,11 @@ import {
 export default {
   title: "containers/DTypography",
   component: DTypography,
-  argTypes: {
-    content,
-    size,
-    tag,
-  },
-  args: {
-    size: "general",
-    tag: "div",
-  },
+  argTypes: { content, size, tag },
+  args: { size: TYPOGRAPHY_SIZES.general, tag: TAG_NAMES.div },
 };
 
-const Template = (args: { content: Content; size: Size; tag: Tag }) => ({
+const Template: Story<DTypographyProps> = (args: DTypographyProps) => ({
   components: { DTypography },
   setup() {
     return { args };
@@ -33,13 +27,11 @@ const Template = (args: { content: Content; size: Size; tag: Tag }) => ({
 });
 
 export const PlainContent = Template.bind({});
-// @ts-ignore // TODO: fix typing
 PlainContent.args = {
   content: "Plain Content",
 };
 
 export const HTMLContent = Template.bind({});
-// @ts-ignore // TODO: fix typing
 HTMLContent.args = {
   content: "<i>HTML Content</i>",
 };
