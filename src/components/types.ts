@@ -1,6 +1,6 @@
-import { TYPOGRAPHY_SIZES } from "@/components/containers/d-typography/constants";
+import { TYPOGRAPHY_SIZES } from "@/components/constants";
 
-export type Content = string | number | undefined;
+export type Content = string | number;
 
 export type TypographySize = keyof typeof TYPOGRAPHY_SIZES;
 

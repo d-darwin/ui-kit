@@ -1,6 +1,6 @@
 import { PropType } from "vue";
-import { TAG_NAMES } from "@/components/containers/d-typography/constants";
-import { TagName } from "@/components/containers/d-typography/types";
+import { TAG_NAMES } from "@/components/constants";
+import { TagName } from "@/components/types";
 
 // TODO: add prop generator generic???
 export default function generateTagNameProp(

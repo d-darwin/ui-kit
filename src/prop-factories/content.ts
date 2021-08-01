@@ -1,5 +1,5 @@
 import { PropType } from "vue";
-import { Content } from "@/components/containers/d-typography/types";
+import { Content } from "@/components/types";
 
 // TODO: add prop generator generic???
 export default function generateContentProp(defaultValue: Content = ""): {

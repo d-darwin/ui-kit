@@ -1,5 +1,6 @@
-// TODO: transform common types
-export const TAG_NAMES = {
+export const TAG_NAME_DEFAULTS: {
+  [tagName in keyof HTMLElementTagNameMap]?: tagName;
+} = {
   div: "div",
   span: "span",
 } as const;

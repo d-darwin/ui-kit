@@ -1,9 +1,10 @@
 import { defineComponent, PropType, VNode } from "vue";
 
 // TODO: which imports order should I use
-import { TagName } from "@/components/containers/d-typography/types";
+import { TagName } from "@/components/types";
 
-import generateContentProp from "@/prop-factories/content";
+// import generateContentProp from "@/prop-factories/content";
+import { contentProp } from "@/props";
 import generateTypographySizeProp from "@/prop-factories/typography-size";
 import generateTagNameProp from "@/prop-factories/tag-name";
 
@@ -14,12 +15,15 @@ export default defineComponent({
   name: "DTypography",
 
   props: {
-    ...generateContentProp(),
+    /**
+     * test description
+     * @type {Content}
+     */
+    content: contentProp,
     ...generateTypographySizeProp(),
     ...generateTagNameProp(),
   },
 
-  // TODO: or use setup() ???
   render(): VNode {
     const Tag: TagName = this.tag;
     const classList = {
@@ -30,9 +34,7 @@ export default defineComponent({
     return !this.$slots.default ? (
       <Tag class={classList} vHtml={this.content} />
     ) : (
-      <Tag class={classList}>
-        <slot />
-      </Tag>
+      <Tag class={classList}>{this.$slots.default()}</Tag>
     );
   },
 });

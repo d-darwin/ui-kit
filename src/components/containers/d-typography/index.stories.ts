@@ -1,10 +1,7 @@
 import { Story } from "@storybook/vue3";
 import { DTypography } from "@/index";
-import { DTypographyProps } from "@/components/containers/d-typography/types";
-import {
-  TAG_NAMES,
-  TYPOGRAPHY_SIZES,
-} from "@/components/containers/d-typography/constants";
+import { DTypographyProps } from "@/components/types";
+import { TAG_NAMES, TYPOGRAPHY_SIZES } from "@/components/constants";
 import {
   content,
   typographySize as size,
@@ -26,16 +23,29 @@ const Template: Story<DTypographyProps> = (args: DTypographyProps) => ({
   template: "<DTypography v-bind='args' />",
 });
 
-export const PlainContent = Template.bind({});
-PlainContent.args = {
+export const UsingPlainContent = Template.bind({});
+UsingPlainContent.args = {
   content: "Plain Content",
 };
 
-export const HTMLContent = Template.bind({});
-HTMLContent.args = {
+export const UsingHTMLContent = Template.bind({});
+UsingHTMLContent.args = {
   content: "<i>HTML Content</i>",
 };
 
-// TODO: with slot
+export const UsingSlot: Story<DTypographyProps> = (args: DTypographyProps) => ({
+  components: { DTypography },
+  setup() {
+    return { args };
+  },
+  template: `
+    <DTypography v-bind='args'>
+      <ul>
+        <li>Using default slot</li>
+        <li>you can pass any HTML or component</li>
+      </ul>
+    </DTypography>
+  `,
+});
 
-// TODO: ???
+// TODO: with links

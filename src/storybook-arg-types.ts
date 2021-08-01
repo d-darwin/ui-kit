@@ -1,7 +1,4 @@
-import {
-  TAG_NAMES,
-  TYPOGRAPHY_SIZES,
-} from "@/components/containers/d-typography/constants";
+import { TAG_NAMES, TYPOGRAPHY_SIZES } from "@/components/constants";
 
 export const content = { control: { type: "text" } };
 

@@ -1,6 +1,6 @@
 import { PropType } from "vue";
-import { TYPOGRAPHY_SIZES } from "@/components/containers/d-typography/constants";
-import { TypographySize } from "@/components/containers/d-typography/types";
+import { TYPOGRAPHY_SIZES } from "@/components/constants";
+import { TypographySize } from "@/components/types";
 
 // TODO: add prop generator generic???
 export default function generateTypographySizeProp(
