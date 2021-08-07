@@ -1,4 +1,4 @@
-import { TAG_NAMES, TYPOGRAPHY_SIZES } from "@/components/constants";
+import { TAG_NAME_DEFAULTS, TYPOGRAPHY_SIZES } from "@/components/constants";
 
 export const content = { control: { type: "text" } };
 
@@ -9,5 +9,5 @@ export const typographySize = {
 
 export const tagName = {
   control: { type: "select" },
-  options: Object.keys(TAG_NAMES),
+  options: Object.keys(TAG_NAME_DEFAULTS),
 };

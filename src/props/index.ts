@@ -1,3 +1,3 @@
-import contentProp from "@/props/content";
+import contentProp from "./content";
 
 export { contentProp };

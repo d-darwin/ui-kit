@@ -1,10 +1,10 @@
 import { PropType } from "vue";
-import { TAG_NAMES } from "@/components/constants";
+import { TAG_NAME_DEFAULTS } from "@/components/constants";
 import { TagName } from "@/components/types";
 
 // TODO: add prop generator generic???
 export default function generateTagNameProp(
-  defaultValue: TagName = TAG_NAMES.div
+  defaultValue: TagName = TAG_NAME_DEFAULTS.div
 ): { tag: { type: PropType<TagName>; default: TagName } } {
   return {
     /**

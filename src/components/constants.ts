@@ -1,8 +1,10 @@
-export const TAG_NAME_DEFAULTS: {
-  [tagName in keyof HTMLElementTagNameMap]?: tagName;
-} = {
+/*: {
+  [tagName in keyof HTMLElementTagNameMap]: tagName;
+} */
+export const TAG_NAME_DEFAULTS = {
   div: "div",
   span: "span",
+  p: "p",
 } as const;
 
 export const TYPOGRAPHY_SIZES = {

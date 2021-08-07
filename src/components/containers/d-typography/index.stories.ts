@@ -1,7 +1,7 @@
 import { Story } from "@storybook/vue3";
 import { DTypography } from "@/index";
 import { DTypographyProps } from "@/components/types";
-import { TAG_NAMES, TYPOGRAPHY_SIZES } from "@/components/constants";
+import { TAG_NAME_DEFAULTS, TYPOGRAPHY_SIZES } from "@/components/constants";
 import {
   content,
   typographySize as size,
@@ -12,7 +12,7 @@ export default {
   title: "containers/DTypography",
   component: DTypography,
   argTypes: { content, size, tag },
-  args: { size: TYPOGRAPHY_SIZES.general, tag: TAG_NAMES.div },
+  args: { size: TYPOGRAPHY_SIZES.general, tag: TAG_NAME_DEFAULTS.div },
 };
 
 const Template: Story<DTypographyProps> = (args: DTypographyProps) => ({

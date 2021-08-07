@@ -3,10 +3,12 @@ import { defineComponent, PropType, VNode } from "vue";
 // TODO: which imports order should I use
 import { TagName } from "@/components/types";
 
-// import generateContentProp from "@/prop-factories/content";
-import { contentProp } from "@/props";
-import generateTypographySizeProp from "@/prop-factories/typography-size";
-import generateTagNameProp from "@/prop-factories/tag-name";
+// import { contentProp } from "@/props";
+import {
+  generateContentProp,
+  generateTypographySizeProp,
+  generateTagNameProp,
+} from "@/prop-factories";
 
 import typographyStyles from "@/assets/styles/compositions/_typography.scss?module";
 import styles from "./styles.css?module";
@@ -15,11 +17,8 @@ export default defineComponent({
   name: "DTypography",
 
   props: {
-    /**
-     * test description
-     * @type {Content}
-     */
-    content: contentProp,
+    // TODO: how to reuse prop JSDocs for storybook-docs ???
+    ...generateContentProp(),
     ...generateTypographySizeProp(),
     ...generateTagNameProp(),
   },
