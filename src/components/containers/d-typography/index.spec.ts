@@ -16,7 +16,6 @@ describe("DTypography", () => {
   });
 
   it("Renders props.size when passed", () => {
-    // TODO: do it more accurate
     expect(wrapper.element.classList.contains(size)).toBe(true);
   });
 
