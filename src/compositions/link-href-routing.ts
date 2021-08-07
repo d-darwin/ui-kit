@@ -1,1 +1,17 @@
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted, nextTick, Ref } from "vue";
+import { isModuleAvailable } from "@/utils";
+
+// TODO: add more clear return type
+export default function useLinkHrefRouting(): {} {
+  const links: Ref<string[]> = ref([]);
+
+  function addLinkClickListeners(): void {}
+
+  onMounted(() => {
+    // TODO: what if module is available but not imported to the project???
+    if (isModuleAvailable("vue-router")) {
+    }
+  });
+
+  return {};
+}
