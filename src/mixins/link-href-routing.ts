@@ -1,7 +1,7 @@
 import { defineComponent, nextTick } from "vue";
 import { isModuleAvailable } from "@/utils";
-
-const VUE_ROUTER_MODULE_PATH = "vue-router";
+import { VUE_ROUTER_MODULE_PATH } from "@/constants";
+import { VueRouter } from "@/types";
 
 /**
  * If children of a component contains relative HTML links the mixins treats them as routes.
@@ -11,9 +11,11 @@ export default defineComponent({
     return {
       links: [] as HTMLAnchorElement[],
       // TODO: can I do this and not rewrite actual this.$router ???
-      $router: {} as {
-        push: (route: string) => void;
-      },
+      $router: {
+        push: (routeName: string) => {
+          console.log(routeName);
+        },
+      } as VueRouter,
     };
   },
 
