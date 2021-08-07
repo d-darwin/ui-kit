@@ -8,17 +8,14 @@
  * @returns {function(): unknown}
  */
 export default function throttle(
-  func: (...args: unknown[]) => unknown,
+  func: (...args: any[]) => any,
   ms: number
-): ((...args: unknown[]) => unknown) | void {
+): (...args: any[]) => any {
   let isThrottled = false;
   let savedThis: ThisType<unknown> | null;
-  let savedArgs: unknown[] | null;
+  let savedArgs: any[] | null;
 
-  function wrapper(
-    this: ThisType<unknown>,
-    ...theArgs: unknown[]
-  ): ((...args: unknown[]) => unknown) | void {
+  function wrapper(this: ThisType<unknown>, ...theArgs: any[]): void {
     if (isThrottled) {
       savedArgs = theArgs;
       savedThis = this;

@@ -1,6 +1,5 @@
 import { defineComponent, nextTick } from "vue";
-import { isModuleAvailable } from "@/utils";
-import { VUE_ROUTER_MODULE_PATH } from "@/constants";
+import { isRouterAvailable, consoleLog, LOG_LEVEL } from "@/utils";
 import { VueRouter } from "@/types";
 
 /**
@@ -10,45 +9,38 @@ export default defineComponent({
   data() {
     return {
       links: [] as HTMLAnchorElement[],
-      // TODO: can I do this and not rewrite actual this.$router ???
+      // just a mock for ts
       $router: {
-        push: (routeName: string) => {
-          console.log(routeName);
-        },
+        // eslint-disable-next-line @typescript-eslint/no-empty-function
+        push: () => {},
       } as VueRouter,
     };
   },
 
   mounted(): void {
-    if (this.hasRouter) {
+    if (isRouterAvailable()) {
       this.addListeners();
     }
   },
 
   beforeUnmount(): void {
-    if (this.hasRouter) {
+    if (isRouterAvailable()) {
       this.removeListeners();
     }
   },
 
   async updated(): Promise<void> {
-    if (isModuleAvailable(VUE_ROUTER_MODULE_PATH)) {
+    if (isRouterAvailable()) {
       this.removeListeners();
       await nextTick(this.addListeners);
     }
-  },
-
-  computed: {
-    hasRouter(): boolean {
-      return isModuleAvailable(VUE_ROUTER_MODULE_PATH) && Boolean(this.$router);
-    },
   },
 
   methods: {
     /**
      * Prevents default browser behavior (page reload) for relative links.
      */
-    navigate(event: MouseEvent): void {
+    async navigate(event: MouseEvent): Promise<void> {
       const targetElement = event.target as HTMLAnchorElement;
       if (targetElement) {
         const href = targetElement.getAttribute("href");
@@ -56,7 +48,14 @@ export default defineComponent({
 
         if (href && href[0] === "/" && target !== "_blank") {
           event.preventDefault();
-          this.$router.push(href);
+          try {
+            await this.$router.push(href);
+          } catch {
+            consoleLog(
+              `Can't navigate to href '${href}'. Module vue-router is installed but not consumed by vue`,
+              LOG_LEVEL.error
+            );
+          }
         }
       }
     },

@@ -1,4 +1,6 @@
+import { useRouter } from "vue-router";
 import { Story } from "@storybook/vue3";
+
 import { DTypography } from "@/index";
 import { DTypographyProps } from "@/components/types";
 import { TAG_NAME_DEFAULTS, TYPOGRAPHY_SIZES } from "@/components/constants";
@@ -30,7 +32,7 @@ UsingPlainContent.args = {
 
 export const UsingHTMLContent = Template.bind({});
 UsingHTMLContent.args = {
-  content: "<i>HTML Content</i>",
+  content: "<i>HTML Content <a href='/test-link'>link</a></i>",
 };
 
 export const UsingSlot: Story<DTypographyProps> = (args: DTypographyProps) => ({
@@ -43,6 +45,7 @@ export const UsingSlot: Story<DTypographyProps> = (args: DTypographyProps) => ({
       <ul>
         <li>Using default slot</li>
         <li>you can pass any HTML or component</li>
+        <li>and even <a href="/test-link">links</a></li>
       </ul>
     </DTypography>
   `,

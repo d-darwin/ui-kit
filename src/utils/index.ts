@@ -1,4 +1,11 @@
-import throttle from "@/utils/throttle";
-import isModuleAvailable from "@/utils/is-module-available";
+import consoleLog, { LOG_LEVEL, getConsoleLogPrefix } from "./console-log";
+import isRouterAvailable from "./is-router-available";
+import throttle from "./throttle";
 
-export { throttle, isModuleAvailable };
+export {
+  consoleLog,
+  LOG_LEVEL,
+  getConsoleLogPrefix,
+  isRouterAvailable,
+  throttle,
+};

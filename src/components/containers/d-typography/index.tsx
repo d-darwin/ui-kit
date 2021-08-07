@@ -1,4 +1,5 @@
-import { defineComponent, PropType, VNode } from "vue";
+import { defineComponent, VNode } from "vue";
+import { linkHrefRouting } from "@/mixins";
 
 // TODO: which imports order should I use
 import { TagName } from "@/components/types";
@@ -15,6 +16,9 @@ import styles from "./styles.css?module";
 
 export default defineComponent({
   name: "DTypography",
+
+  // TODO: suppose to use composition instead
+  mixins: [linkHrefRouting],
 
   props: {
     // TODO: how to reuse prop JSDocs for storybook-docs ???

@@ -1,10 +1,10 @@
-const LOG_LEVEL_TYPE = {
+export const LOG_LEVEL = {
   log: "log",
   warn: "warn",
   error: "error",
 } as const;
 
-type LogLevelType = typeof LOG_LEVEL_TYPE[keyof typeof LOG_LEVEL_TYPE];
+type LogLevelType = typeof LOG_LEVEL[keyof typeof LOG_LEVEL];
 
 /**
  * Add source (library name) to the warnings
@@ -14,8 +14,11 @@ type LogLevelType = typeof LOG_LEVEL_TYPE[keyof typeof LOG_LEVEL_TYPE];
  */
 export default function consoleLog(
   message: string,
-  level: LogLevelType = LOG_LEVEL_TYPE.log
+  level: LogLevelType = LOG_LEVEL.log
 ): void {
-  const prefix = `[@darwin-studio/ui-kit ${level}]: `;
-  console[level](prefix + message);
+  console[level](getConsoleLogPrefix(level) + message);
+}
+
+export function getConsoleLogPrefix(level: LogLevelType): string {
+  return `[@darwin-studio/ui-kit ${level}]: `;
 }
