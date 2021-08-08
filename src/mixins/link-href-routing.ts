@@ -52,7 +52,8 @@ export default defineComponent({
             await this.$router.push(href);
           } catch {
             consoleLog(
-              `Can't navigate to href '${href}'. Module vue-router is installed but not consumed by vue`,
+              `Can't navigate to '${href}'.
+              The vue-router module is installed but isn't consumed by vue`,
               LOG_LEVEL.error
             );
           }
@@ -62,6 +63,7 @@ export default defineComponent({
 
     addListeners(): void {
       this.links = this.$el.getElementsByTagName("a");
+      // TODO: maybe we should listen on document ???
       for (let i = 0; i < this.links.length; i++) {
         this.links[i].addEventListener("click", this.navigate, false);
       }

@@ -1,6 +1,4 @@
-import { useRouter } from "vue-router";
 import { Story } from "@storybook/vue3";
-
 import { DTypography } from "@/index";
 import { DTypographyProps } from "@/components/types";
 import { TAG_NAME_DEFAULTS, TYPOGRAPHY_SIZES } from "@/components/constants";
