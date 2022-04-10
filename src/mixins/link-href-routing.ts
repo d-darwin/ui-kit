@@ -9,7 +9,7 @@ export default defineComponent({
   data() {
     return {
       links: [] as HTMLAnchorElement[],
-      // just a mock for ts
+      // TODO: just a mock for ts (don't do this)
       $router: {
         // eslint-disable-next-line @typescript-eslint/no-empty-function
         push: () => {},

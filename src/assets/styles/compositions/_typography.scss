@@ -1,5 +1,13 @@
 @import "../tokens/_typography.scss";
 
+// TODO: remove or move to some general part
+html {
+  font-family: var(--font-family, "Geneva, Arial, Helvetica, sans-serif");
+  font-size: var(--general-font-size);
+  line-height: var(--general-line-height);
+  font-weight: var(--general-font-weight);
+}
+
 .small {
   font-size: var(--small-font-size);
   line-height: var(--small-line-height);
