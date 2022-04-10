@@ -34,7 +34,6 @@ describe("linkHrefRouting", () => {
   it("Should use router.push on the link click instead of default behavior", () => {
     const link = wrapperWithRouter.findAll("a")[0].element as HTMLAnchorElement;
     link.click();
-    expect(mockRouter.push).toHaveBeenCalled();
     expect(mockRouter.push).toHaveBeenCalledWith(href);
   });
 

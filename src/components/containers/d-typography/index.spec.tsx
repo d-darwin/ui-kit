@@ -3,7 +3,7 @@ import { DTypography } from "@/index";
 
 describe("DTypography", () => {
   const content = "Plain string content";
-  const size = "h3"; // The component should has this className
+  const size = "h3"; // The component should have this className
   const tag = "details";
   const slotContent = <div className="slotContent">{content}</div>;
 
@@ -13,9 +13,7 @@ describe("DTypography", () => {
 
   const wrapperWithSlot = shallowMount(DTypography, {
     props: { size, tag },
-    slots: {
-      default: slotContent,
-    },
+    slots: { default: slotContent },
   });
 
   it("Renders props.content", () => {
