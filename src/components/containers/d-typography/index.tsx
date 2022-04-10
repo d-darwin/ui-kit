@@ -12,7 +12,7 @@ import {
 } from "@/prop-factories";
 
 import typographyStyles from "@/assets/styles/compositions/_typography.scss?module";
-import styles from "./styles.css?module";
+import styles from "./index.css?module";
 
 export default defineComponent({
   name: "DTypography",
