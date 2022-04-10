@@ -1,6 +1,6 @@
-export default function isRouterAvailable(): boolean {
+export default function isRouterAvailable(packageName = "vue-router"): boolean {
   try {
-    require.resolve("vue-router");
+    require.resolve(packageName);
     return true;
   } catch {
     return false;
